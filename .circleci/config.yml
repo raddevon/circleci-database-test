@@ -45,12 +45,16 @@ jobs:
         only: staging
 workflows:
   version: 2
-  deploy:
+  build-and-deploy:
     jobs:
       - build
       - stage:
           requires: 
             - build
+          branches:
+            only: staging
       - deploy:
           requires: 
             - build
+          branches:
+            only: master
