@@ -51,10 +51,12 @@ workflows:
       - stage:
           requires: 
             - build
-          branches:
-            only: staging
+          filters:
+            branches:
+              only: staging
       - deploy:
           requires: 
             - build
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
