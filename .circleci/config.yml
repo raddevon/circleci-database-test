@@ -48,6 +48,11 @@ workflows:
   build-and-deploy:
     jobs:
       - build
+          filters:
+            branches:
+              only: 
+                - staging
+                - master
       - stage:
           requires: 
             - build
