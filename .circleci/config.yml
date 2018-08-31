@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/appName
     docker:
-      - image: ruby:2.3.1-jessie
+      - image: ruby:2.3-jessie
         environment:
           PG_HOST: localhost
           PG_USER: ubuntu
